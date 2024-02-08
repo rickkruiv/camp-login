@@ -4,8 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Camp</title>
+    <title>Camp Login</title>
 </head>
 <body>
+    <div class="container">
+
+        <!-- Logo -->
+        <div class="logo">
+            <img src="assets/images/logo.png" alt="camp-logo">
+        </div>
+
+        <!-- Formulário -->
+        <form action="#">
+            <!-- cabeçalho -->
+            <div class="form-header">
+                <!-- titulo -->
+                <div class="title">
+                    <img src="assets/images/log-in.png" alt="log-in">
+                    <h1>Faça seu login</h1>
+                </div>
+                <!-- subtitulo -->
+                <div class="subtitle">
+                    <h3>Entre com suas informações de cadastro.</h3>
+                </div>
+            </div>
+            <!-- inputs do login -->
+            <div class="input-group">
+                <!-- email -->
+                <div class="input-box">
+                    <label for="email">E-mail</label>
+                    <img src="assets/images/mail.png" alt="email">
+                    <input type="text" name="email" id="email" placeholder="Digite seu e-mail">
+                </div>
+                <!-- senha -->
+                <div class="input-box">
+                    <label for="password">Senha</label>
+                    <img src="assets/images/lock.png" alt="lock">
+                    <input type="text" name="password" id="password" placeholder="Digite sua senha">
+                </div>
+            </div>
+            <!-- lembre-me -->
+            <div class="input-box" style="display: inline;">
+                <input type="checkbox" name="remember" id="remember">
+                <label for="remember">Lembre-me</label>
+            </div>
+            <!-- esqueci a senha -->
+            <div class="forgot" style="display: inline;">
+                <a href="#">Esqueci minha senha</a>
+            </div>
+            <!-- botão de entrar -->
+            <div class="login-button">
+                <button>
+                    <a href="#">ENTRAR</a>
+                </button>
+            </div>
+            <!-- para registra-se -->
+            <div class="register">
+                Não tem uma conta? <a href="#">Registre-se</a>
+            </div>
+        </form>
+    </div>
+
 </body>
 </html>
