@@ -32,13 +32,13 @@ body {
     top: -4px;
 }
 
-h3, label {
+h3, .labelStyle {
     color: var(--text-base);
     font-size: 16px;
     font-weight: normal;
 }
 
-label, a {
+.labelStyle, a {
     user-select: none;
     cursor: pointer;
 }
@@ -150,38 +150,53 @@ input[type="text"]:focus-visible {
 }
 
 /* checkbox style */
-
-input[type=checkbox] {
-    position: relative;
-    cursor: pointer;
-    margin-right: 5px;
+input[type="checkbox"] {
+    display: none;
 }
 
-input[type="checkbox"]::before {
+.checkboxStyle {
+    display: inline-block;
+    padding-left: 22px;
+    position: relative;
+    font-size: 16px;
+}
+
+.checkboxStyle::before {
     content: "";
-    background: var(--form-background);
-    display: block;
-    position: absolute;
     width: 16px;
     height: 16px;
-    top: -1px;
-    left: -1px;
-    border: .5px solid var(--text-base);
-    border-radius: 5px;
+    border: 1px solid var(--text-base);
+    border-radius: 4px;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 2px;
+    transition: all .2s ease;
 }
 
-input[type=checkbox]:checked:after {
+.checkboxStyle::after {
     content: "";
-    display: block;
-    width: 2px;
+    width: 3px;
     height: 7px;
-    border: solid var(--text-base);
-    border-width: 0 2px 2px 0;
     transform: rotate(45deg);
+    border: solid var(--text-base);
+    border-width: 0px 3px 3px 0px;
     position: absolute;
-    top: 2px;
-    left: 5px;
-  }
+    top: 5px;
+    left: 6px;
+    display: none;
+    
+    transition: all .5s ease;
+}
+
+input[type="checkbox"]:active + .checkboxStyle::before {
+    transform: scale(1.1);
+    border-radius: 6px;
+}
+
+input[type="checkbox"]:checked + .checkboxStyle::after {
+    display: inline-block;
+}
 
 /* botão */
 .login-button button {
